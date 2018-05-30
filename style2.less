@@ -1,0 +1,14 @@
+/*To identify how nesting works*/
+@primarycolor: #FF7F50;
+@color:#800080;
+.outer{
+	.inner{
+		.val(@param){
+			color: @param;
+		}
+	}
+}
+
+.class1{
+	.outer > .inner > .val(#000000);
+}

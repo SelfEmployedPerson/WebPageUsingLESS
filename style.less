@@ -1,0 +1,13 @@
+/*To identify how nesting works*/
+@primarycolor: #FF7F50;
+@x: a;
+@a: red;
+@color: blue;
+.cont(@count) when (@count > 0) {
+   .cont((@count - 1));
+   font-size: (25px * @count);
+}
+
+h1 {
+   .cont(7);
+}
